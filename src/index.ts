@@ -2,16 +2,27 @@
 
 // Source: https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true
 
-function simpleArraySum(ar: Array<number>): number {
-  let suma = 0;
-  ar.forEach((element) => suma += element);
-  return suma;
-}
+function compareTriplets(a: number[], b: number[]): number[] {
+  const longitud = a.length 
+      let aPoints = 0
+      let bPoints = 0
+      for (let index = 0 ; index < longitud ; index++){
+          if(a[index] > b[index]){
+              aPoints++
+          }
+          if(a[index] < b[index]){
+              bPoints++;    
+          }
+      }
+      
+      return [aPoints,bPoints];
+  }
 
 function main() {
   console.log('---------- Cool Programing ----------\n');
-  const testArray = [1, 2, 3, 4, 10, 11];
-  const result = simpleArraySum(testArray);
+  const testArray1 = [5, 6, 7];
+  const testArray2 = [3, 6, 10];
+  const result = compareTriplets(testArray1,testArray2);
   console.log('Result: ', result);
 }
 
